@@ -45,5 +45,6 @@ console.log("1"+2+2)
 console.log(2+2+"2")
 
 console.log(+true) 
+// console.log(true+) will provide the error
 
 //  link to study the ecma script
