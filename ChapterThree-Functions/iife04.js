@@ -7,9 +7,10 @@
     console.log('db connected')
 })();
 // need to end the line with the semicolan
+// that means need to complete one section complete
 
 // syntax()
-// ()()
+// ()() 
 
 
 ((name)=>{
