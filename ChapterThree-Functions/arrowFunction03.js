@@ -37,6 +37,7 @@ const addtwo=(n1,n2 )=>{
 
 const addTwo=(n1,n2)=>  ({useName:"prabhnajn"}) //mandatory to wrap in the parenthises
 
+
 // const addTwo=(n1,n2)=>  n1+n2 //implicit return
 
 console.log(addTwo(6,6))
