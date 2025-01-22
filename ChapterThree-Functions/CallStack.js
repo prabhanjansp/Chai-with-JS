@@ -48,3 +48,17 @@ one()
 two()
 three()
 
+// in one the output goes like this
+// anonymous
+// one()
+// two()
+// three()
+
+// in two()
+// anonymous
+// two()
+// three()
+
+// in three()
+// anonymous
+// three()
