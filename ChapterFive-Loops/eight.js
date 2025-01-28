@@ -20,3 +20,4 @@ const courses = [
   return acc + item.price;
 }, 0);
 console.log(store)
+console.log(typeof(store))
