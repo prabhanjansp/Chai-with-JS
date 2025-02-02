@@ -15,4 +15,4 @@ console.log(undefined<0);//false
 //  in javascript comparison and equality operator two different things
 // strict comparison
 // it won't convert it to  any data type
-// 
+//  here i have mentioned all the comparision  operator
