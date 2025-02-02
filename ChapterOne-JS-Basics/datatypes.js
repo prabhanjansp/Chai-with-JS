@@ -27,3 +27,4 @@ let isLoggedIn =true
  */
 
 console.log(typeof null)
+//  date object string 
