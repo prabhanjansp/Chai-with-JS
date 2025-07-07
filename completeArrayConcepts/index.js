@@ -172,3 +172,40 @@ console.log(numbers1); // [ 1, 2, <4294967294 empty items> ]
 numbers1.length=0;
 console.log(numbers1.length); // 0, because the length of the numbers1 is set to 0
 
+// concat method
+const one=[1,2,3];
+const twoo=[4,5,6];
+const threee=[7,8,9];
+const four=[10,11,12];  
+
+const mergeedArray = one.concat(twoo, threee, four); // merging the arrays using the concat method
+console.log(mergeedArray); // [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ]
+// there is no limit on the number of arrays that can be merged using the concat method
+//  and also we can use the spread operator to merge the arrays
+const mergedArrayWithSpread = [...one, ...twoo, ...threee, ...four]; // merging the arrays using the spread operator
+console.log(mergedArrayWithSpread); // [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ]
+
+// join method
+const joinedArray = mergeedArray.join(", "); // joining the elements of the array using the join method and ultimately it returns the string
+console.log(joinedArray); // "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12"
+//  and also we can use the join method to join the elements of the array using a different separator
+const joinedArrayWithSeparator = mergeedArray.join(" - "); // joining the elements of the array using a different separator
+console.log(joinedArrayWithSeparator); // "1 - 2 - 3 - 4 - 5 - 6 - 7 - 8 - 9 - 10 - 11 - 12"
+console.log([].join()); // "", because the array is empty and the join method will return an empty string
+
+// fill method
+const colours = ["red", "green", "blue", "yellow"];
+ colours.fill("black"); // filling the elements of the array with a new value from index 1 to index 3
+console.log(colours); // [ 'black', 'black', 'black', 'black' ]
+//  and also we can use the fill method to fill the elements of the array with a new value from a specific index to the end of the array
+const colours1 = ["red", "green", "blue", "yellow"];    
+colours1.fill("black", 1); // filling the elements of the array with a new value from index 1 to the end of the array
+console.log(colours1); // [ 'red', 'black', 'black', 'black' ]
+
+colours.fill("black", 1, 3); // filling the elements of the array with a new value from index 1 to index 3
+console.log(colours); // [ 'red', 'black', 'black', 'yellow' ] 
+
+const names = ["Alice", "Bob", "Charlie", "David"];
+console.log(names.includes("Alice")); // true, because the array contains the element "Alice"
+console.log(names.includes("Eve")); // false, because the array does not contain the element
+console.log(names.includes("david")); // false, because the array does not contain the element "david" (case-sensitive)
