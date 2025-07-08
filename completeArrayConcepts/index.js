@@ -241,10 +241,9 @@ console.log(
 
 console.log(numbers2.sort((a, b) => b - a)); // [ 8, 5, 3, 2, 1 ]
 
-let ages= [25, 30, 18, 22, 35];
+let ages = [25, 30, 18, 22, 35];
 ages.sort(); // Sorting in ascending order
 console.log(ages); // [ 18, 22, 25, 30, 35 ]
-
 
 // slice method
 // it is used to extract a portion of the array and returns a new array, and it does not modify the original array
@@ -253,12 +252,12 @@ console.log(slicedArray); // [ 2, 3 ]
 
 // splice method
 // it is used to add or remove elements from the array, and it modifies the original array
-const splicedArray = numbers2.splice(1, 2, 6, 7); // removing 2 elements from index 1 and adding 6 and 7  
-const oldnames=["ram", "shyam", "hari", "sita", "gita", "ram"];
+const splicedArray = numbers2.splice(1, 2, 6, 7); // removing 2 elements from index 1 and adding 6 and 7
+const oldnames = ["ram", "shyam", "hari", "sita", "gita", "ram"];
 console.log(oldnames.splice(1, 2, "krishna", "radha"));
 console.log(oldnames); // [ 'ram', 'krishna', 'radha', 'sita', 'gita', 'ram' ]
 console.log(splicedArray); // [ 2, 3 ], because the elements 2 and 3 are removed from the array
-oldnames.splice(2, 0,'hari');
+oldnames.splice(2, 0, "hari");
 
 // at method
 // it is used to access the elements of the array, and it returns the element at the specified index
@@ -268,10 +267,54 @@ console.log(junkfood.at(-1)); // 🍿, accessing the last element of the arra y
 console.log(junkfood.at(-2)); // 🌭, accessing the second last element of the array
 console.log(junkfood.at(-12)); // undefined
 // copyWithin method()
-const freshNumbers = [1, 2, 3, 4, 5,6,7,8];
-freshNumbers.copyWithin(0, 3, 6); 
-console.log(freshNumbers); 
+const freshNumbers = [1, 2, 3, 4, 5, 6, 7, 8];
+freshNumbers.copyWithin(0, 3, 6);
+console.log(freshNumbers);
 // [ 4, 5, 6, 4, 5, 6, 7, 8 ]
 freshNumbers.copyWithin(0, 3);
-console.log(freshNumbers); 
+console.log(freshNumbers);
 
+// flat method
+// it is used to flatten the array, and it returns a new array
+const nestedArray1 = [1, 2, [3, 4, [5, 6]]];
+const flattenedArray = nestedArray1.flat(Infinity); // flattening the array
+console.log(first);
+
+// Grouping the array elements
+const employees = [
+  { name: "Alice", department: "HR", salay: 50000 },
+  { name: "Bob", department: "Engineering", salay: 50000 },
+  { name: "Charlie", department: "HR", salay: 50000 },
+  { name: "David", department: "Engineering", salay: 50000 },
+  { name: "Eve", department: "Marketing", salay: 50000 },
+];
+const deptEmp=Object.groupBy(employees, (emp) => emp.department);
+console.log(deptEmp);
+// Output:
+// {
+//   HR: [
+//     { name: 'Alice', department: 'HR', salay: 50000 },
+
+//     { name: 'Charlie', department: 'HR', salay: 50000 }
+//   ],     
+//   Engineering: [
+//     { name: 'Bob', department: 'Engineering', salay: 50000
+//     },
+//     { name: 'David', department: 'Engineering', salay: 50000 }
+//   ],
+//   Marketing: [
+//     { name: 'Eve', department: 'Marketing', salay: 50000 }
+//   ]
+
+
+const salaryHigherThan50k =Object.groupBy(employees, (emp) => emp.salay > 50000 ? "Higher than 50k" : "Lower than 50k");
+console.log(salaryHigherThan50k);
+// Output:
+// {  
+//   'Higher than 50k': [],
+//   'Lower than 50k': [  
+//     { name: 'Alice', department: 'HR', salay: 50000 },
+//     { name: 'Bob', department: 'Engineering', salay: 50000 },  
+//     { name: 'Charlie', department: 'HR', salay: 50000 },
+//     { name: 'David', department: 'Engineering', salay: 50000 },
+//     { name: 'Eve', department: 'Marketing', salay: 50000 }
